@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+  font-family: Lato;
+}
+
+.App {
+  background-color: #fafafa;
+  padding-top: 80px;
+}
+
+.App-container {
+  border: solid 1px #d1d1d1;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 50px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.tab-links {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.tab-links a {
+  display: inline-block;
+  width: 33.33%;
+  cursor: pointer;
+  padding: 10px 0;
+  color: #999;
+  border: solid 1px #d1d1d1;
+  box-sizing: border-box;
+  border-left: 0;
+  border-top: 0;
+}
+
+.tab-links a:nth-child(3) {
+  border-right: 0;
+}
+
+.tab-links a.active {
+  color: #c290e2;
+  border-bottom: 0;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/** 
+ *
+ * Create inputs tabs
+ * 
+ */
+
+.Create-container {
+}
+
+.Create-container > .Create-list > .Create-parent > .Create-box {
+  margin-top: 0;
+}
+
+.Create-condition, .Create-question, .Create-type {
+  margin: 7px 0;
+}
+
+.Create-button {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.Create-button button, .Create-new-input {
+  margin-left: 10px;
+  padding: 10px 0;
+  width: 200px;
+  border: 0;
+}
+
+.Create-button .Create-subinput-btn, .Create-new-input {
+  background-color: #c290e2;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;  
+}
+
+.Create-new-input {
+  background-color: #abb7dd;
+}
+
+.Create-button .Create-delete-btn {
+  background-color: #f7f7f7;
+  color: #a6a6a6;
+  font-size: 16px;
+  font-weight: bold;  
+}
+
+.Create-new-input {
+  margin-top: 40px;
+  padding: 10px 20px;  
+}
+
+.Create-condition .label, .Create-question .label, .Create-type .label {
+  display: inline-block;
+  width: 100px;
+  color: #5a5a5a;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Create-question input {
+  width: 350px;
+  height: 36px;
+  padding: 1px 8px;
+  border-radius: 3px;
+  border: solid 1px #e8e8e8;
+  font-size: 14px;
+}
+
+.Create-condition input, .Create-condition select~select {
+  margin-left: 10px;
+}
+
+.number .Create-question-val {
+  width: 179px;
+  height: 36px;
+  padding: 0 8px;
+  border-radius: 3px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.Select--single {
+  width: 368px;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.Select--single .Select-control {
+  border: solid 1px #e8e8e8;
+}
+
+.Create-question-cond.Select--single {
+  width: 179px;
+}
+
+.Create-condition.yesno .Create-question-cond.Select--single, 
+.Create-condition.yesno .Create-question-val.Select--single {
+  width: 179px;
+}
+
+.Create-condition.yesno .Create-question-val.Select--single {
+  margin-left: 10px;
+}
+
+.Create-list {
+  /*margin-left: 20px;*/
+  text-align: left;
+}
+
+.Create-parent {
+  /*margin-left: 20px;*/
+}
+
+.Create-child {
+  margin-left: 20px;
+}
+
+.Create-box {
+  border: solid 2px #f1f1f1;
+  border-left: solid 4px #c290e2;
+  padding: 16px 35px;
+  margin: 10px 20px 15px;
+  width: 500px;
+}
+
+.Create-child .Create-box {
+  border-left: solid 4px #abb7dd;
+}
+
+.Create-child .Create-child .Create-box {
+  border-left: solid 4px #e1e1e1;
+}
+
+.Create-child .Create-child .Create-child .Create-box {
+  border-left: solid 4px #f7e0f3;
+}
+
+/** 
+ *
+ * Preview inputs tabs
+ * 
+ */
+.Preview-list {
+  text-align: left;
+}
+
+.Preview-child {
+  margin-left: 25px;
+}
+
+.Preview-box {
+  margin: 25px 50px 15px;
+  width: 500px;
+}
+
+.Preview-number-input input, .Preview-text-input input {
+  width: 350px;
+  height: 36px;
+  padding: 1px 8px;
+  border-radius: 3px;
+  border: solid 1px #e8e8e8;
+}
+
+.Preview-question p {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/** 
+ *
+ * Preview checkboxes
+ * 
+ */
+.Preview-yesno-input .checkbox {
+  display: inline-block;
+  position: relative;
+}
+
+.Preview-yesno-input .checkbox input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.Preview-yesno-input .checkbox label{
+  display: block;
+  position: relative;
+  padding: 0 25px;
+  margin: 6px auto;
+  height: 20px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+.Preview-yesno-input .checkbox:hover label{
+  color: #888;
+}
+
+.Preview-yesno-input .checkbox .check {
+  display: block;
+  position: absolute;
+  border: 1px solid #AAAAAA;
+  border-radius: 100%;
+  height: 12px;
+  width: 12px;
+  top: 10px;
+  left: 5px;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+
+.Preview-yesno-input .checkbox:hover .check {
+  color: #888;
+}
+
+.Preview-yesno-input .checkbox .check::before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 8px;
+  width: 8px;
+  top: 2px;
+  left: 2px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+.Preview-yesno-input .checkbox input[type=radio]:checked ~ .check {
+  border: 1px solid #c290e2;
+}
+
+.Preview-yesno-input .checkbox input[type=radio]:checked ~ .check::before{
+  background: #c290e2;
+}
+
+/** 
+ *
+ * Export inputs tabs
+ * 
+ */
+
+.Export-container {
+  padding: 10px 20px;
+}
+
+.Export-container textarea {
+  padding: 8px 15px;
+  border-radius: 3px;
+  border: solid 1px #e8e8e8;
+  font-size: 14px;  
+  color: #7b7b7b;
+}
