@@ -121,6 +121,7 @@
   border-radius: 3px;
   border: solid 1px #e8e8e8;
   font-size: 14px;
+  outline-color: #c290e2;
 }
 
 .Create-condition input, .Create-condition select~select {
@@ -209,7 +210,7 @@
 }
 
 .Preview-box {
-  margin: 25px 50px 15px;
+  margin: 25px 30px 15px;
   width: 500px;
 }
 
@@ -219,6 +220,7 @@
   padding: 1px 8px;
   border-radius: 3px;
   border: solid 1px #e8e8e8;
+  outline-color: #c290e2;
 }
 
 .Preview-question p {
