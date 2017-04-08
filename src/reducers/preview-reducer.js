@@ -50,7 +50,7 @@ const fetchDirectChilds = (state, inputId) => {
     const directChildsOnlyStateTree = Object.keys(originalStateTree)
                       .filter(id => directChildIds.includes(parseInt(id, 10)))
                       .reduce((obj, key) => {
-                        const evaluatedState = renderChildsIfConditionIsMet(originalStateTree, key, '');
+                        const evaluatedState = renderChildsIfConditionIsMet(originalStateTree, key);
                         obj[key] = evaluatedState[key];
                         return obj;
                       }, {});
@@ -98,7 +98,7 @@ const fetchQuestionsAtRoot = (state, inputModels) => {
   let newState = Object.assign({}, state);
   rootIds.forEach((rootId) => {
     newState[rootId] = deepClone(inputModels[rootId]);
-    newState = renderChildsIfConditionIsMet(newState, rootId, '');
+    newState = renderChildsIfConditionIsMet(newState, rootId);
   });
 
   return newState;

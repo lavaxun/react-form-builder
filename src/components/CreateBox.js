@@ -33,9 +33,9 @@ class CreateBox extends Component {
   }
 
   changeConditionVal(e) {
-    console.log(e.target.value);
+    const val = e.target.value && e.target.value.length > 0 ? parseInt(e.target.value, 10) : undefined;
     this.props.changeConditionVal({
-      value: e.target.value
+      value: val
     });
   }
 

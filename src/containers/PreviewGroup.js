@@ -7,8 +7,13 @@ import PreviewBox from '../components/PreviewBox';
 class PreviewGroup extends Component {
 
   evaluateInput(e) {
+    const inputModel = this.props.preview;
     const inputId = this.props.inputId;
-    const value = e.target.value;
+    let value = e.target.value;
+
+    if (inputModel.type === 'number') {
+      value = e.target.value && e.target.value.length > 0 ? parseInt(e.target.value, 10) : undefined;
+    }
     this.props.actions.evaluateInputCondition(inputId, value);
   }
 
