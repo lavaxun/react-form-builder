@@ -33,7 +33,17 @@ class CreateBox extends Component {
   }
 
   changeConditionVal(e) {
-    this.props.changeConditionVal(e.target.value);
+    console.log(e.target.value);
+    this.props.changeConditionVal({
+      value: e.target.value
+    });
+  }
+
+  getMinimumNumber(e) {
+    if (this.props.inputModel.condition && this.props.inputModel.condition.type === 'lt') {
+      return 1;
+    }
+    return 0;
   }
 
   render() {
@@ -70,6 +80,7 @@ class CreateBox extends Component {
             options={this.state.number.conditionType}
             onChange={this.props.changeConditionType} />
           <input 
+            min={this.getMinimumNumber.bind(this)}
             className="Create-question-val"
             type="number" pattern="[0-9]*" inputMode="numeric"
             onChange={this.changeConditionVal.bind(this)}
