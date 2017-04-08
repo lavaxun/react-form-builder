@@ -137,6 +137,7 @@
   box-sizing: border-box;
   font-size: 14px;
   margin-left: 10px;
+  outline-color: #c290e2;
 }
 
 .Select--single {
@@ -144,6 +145,11 @@
   display: inline-block;
   font-size: 14px;
   vertical-align: middle;
+}
+
+.Select--single.is-focused:not(.is-open) > .Select-control {
+  border-color: #c290e2;
+  box-shadow: inset 0 1px 1px rgba(194, 144, 226, 0.23), 0 0 0 3px rgba(194, 144, 226, 0.09);
 }
 
 .Select--single .Select-control {
